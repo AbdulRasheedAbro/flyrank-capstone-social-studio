@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    container_name: social-media-studio
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_PATH: /app/data/social-studio.db
+    volumes:
+      - social_studio_data:/app/data
+    restart: unless-stopped
+volumes:
+  social_studio_data:

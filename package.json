@@ -1,0 +1,20 @@
+{
+  "name": "flyrank-capstone-social-studio",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A reliable social campaign publishing studio for the FlyRank Backend Track capstone.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "worker": "node src/worker.js",
+    "test": "node --test",
+    "seed": "node src/seed.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

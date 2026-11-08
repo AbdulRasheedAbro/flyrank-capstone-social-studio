@@ -1,0 +1,13 @@
+name: flyrank-capstone-social-studio
+run: npm start
+seed: npm run seed
+test: npm test
+base_url: http://localhost:3000
+endpoints:
+  health: GET /api/health
+  ingest: POST /api/posts
+  generate: POST /api/posts/{postId}/generate
+  approve_edit_reject: PATCH /api/variants/{variantId}
+  schedule: POST /api/variants/{variantId}/schedule
+  publish_now: POST /api/schedules/{scheduleId}/publish
+  history: GET /api/history
